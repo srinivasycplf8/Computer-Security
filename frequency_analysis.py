@@ -25,7 +25,9 @@ def frequency_analysis(text_file):
 
     sorted_new_list=list(sort_orders.keys())
 
-    for letter in sorted_new_list:
+    print(sorted_new_list)
+
+#for letter in sorted_new_list:
         
 
 
