@@ -24,14 +24,12 @@ def aes_key(file_name):
     #Key search starts from now on
     
     iv =  bytearray.fromhex("010203040506070809000a0b0c0d0e0f").decode()
-    print(iv)
 
     for key in words:
         if len(key)<16:
             key=key+"#"*(16-len(key))     
             obj = AES.new(key.encode("utf8"), AES.MODE_CBC, iv.encode("utf8"))
             ciphertext = obj.encrypt(pad(plain_text.encode("utf8"),16))
-            #print(cipher_input,"::: esjijldjfilj::: ",ciphertext)
             cipher_hex=binascii.hexlify(ciphertext)
             if cipher_input==cipher_hex:
                 print("bjnkljnkl :j",key)
